@@ -129,3 +129,24 @@ Imagine taking the healing powers of natural plants—like herbs, fruits, seeds,
 > 2. **It Cleans the Medicine:** It inspects the plant extracts to make sure there are no bad chemicals or heavy metals inside.
 > 3. **It Helps Sick People:** It looks at a person's blood tests and tells them exactly which natural herb or remedy will help them feel better.
 > 4. **It Never Forgets:** If the power goes out, it saves its spot instantly like a video game auto-save, and it keeps bad hackers away! 🛡️⚡
+## 📊 System Architecture & Workflow Diagrams
+
+<p align="center">
+  <img src="5222.png" alt="Advanced Natural Medical Institution Header" width="100%">
+</p>
+
+### Pipeline & Protocol Flowcharts
+
+* **Protocol Verification Flow:** `![Protocol Verification Flow](PT-1001%20Protocol%20Verification%20Flow-2026-10-23-071414.png)`
+* **Crash Recovery Engine:** `![Crash Recovery Engine](CrashRecoveryEngine%20Atomic%20Recovery%20Flow-2026-10-23-070618.png)`
+* **SHA-256 Tamper-Evident Logging:** `![SHA-256 Logging](SHA-256%20Tamper-Evident%20Logging%20Pipeline-2026-10-23-070339.png)`
+* **KubeRay TPU Allocation:** `![KubeRay TPU](KubeRay%20TPU%20Allocation%20Pipeline-2026-10-23-070222.png)`
+* **KServe GNN Phytochemical Inference:** `![KServe GNN](KServe%20GNN%20Phytochemical%20Inference%20Pipeline-2026-10-23-070327.png)`
+* **Botanical Discovery Engine:** `![Botanical Discovery](BotanicalDiscoveryEngine%20Screening%20Pipeline-2026-10-23-070313.png)`
+* **Python AIML Dependency:** `![AIML Dependency](Python%20AIML%20Dependency%20Pipeline-2026-10-23-070318.png)`
+* **WAL WAF CICD Deployment:** `![WAL WAF CICD](WAL%20WAF%20CICD%20Deployment%20Framework-2026-10-23-070308.png)`
+* **MIT Software Warranty Disclaimer:** `![Warranty Disclaimer](MIT%20Software%20Warranty%20Disclaimer%20Flow-2026-10-23-070154.png)`
+* **Mass Spec Spectral QC:** `![Mass Spec QC](Mass-Spec%20Spectral%20QC%20Verification%20Pipeline-2026-10-23-070146.png)`
+* **Pytest Root Path Setup:** `![Pytest Setup](Pytest%20Root%20Path%20Setup%20Flow-2026-10-23-071336.png)`
+* **Test Studying Module:** `![Test Studying](TestStudyingModule%20Phytochemical%20Retrieval%20Pipeline-2026-10-23-071112.png)`
+* 

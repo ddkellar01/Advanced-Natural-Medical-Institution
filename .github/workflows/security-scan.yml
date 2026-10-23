@@ -35,3 +35,4 @@ jobs:
     - name: Run Safety Scan (Dependency Vulnerability Audit)
       run: |
         safety scan --file requirements.txt || true
+

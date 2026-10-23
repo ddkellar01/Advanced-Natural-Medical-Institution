@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  core-orchestrator:
+    build:
+      context: .
+      dockerfile: deploy/docker/Dockerfile.core
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=development
+    volumes:
+      - ./data:/app/data
+
+  nnl-engine:
+    build:
+      context: .
+      dockerfile: deploy/docker/Dockerfile.nnl
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

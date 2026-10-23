@@ -26,6 +26,7 @@ jobs:
 
     - name: Run Complete Test Suite
       run: |
+        export PYTHONPATH=.
         pytest tests/ -v
 
     - name: Log in to Docker Hub

@@ -1,0 +1,77 @@
+name: Continuous Integration & Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test-and-lint:
+    name: Code Quality & Unit Testing
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository Code
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+
+    - name: Install Project Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Bandit Security Inspection
+      run: |
+        bandit -r src/ security/ -ll -ii
+
+    - name: Run Safety Dependency Scan
+      run: |
+        safety scan --file requirements.txt || true
+
+    - name: Execute Full Pytest Suite
+      env:
+        PYTHONPATH: .
+      run: |
+        pytest tests/ -v
+
+  model-validation:
+    name: GCN-GAT Neural Network Validation
+    runs-on: ubuntu-latest
+    needs: test-and-lint
+
+    steps:
+    - name: Checkout Repository Code
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+
+    - name: Install PyTorch & Core Libraries
+      run: |
+        python -m pip install --upgrade pip
+        pip install torch==2.5.0 numpy==2.1.2 pydantic==2.9.2
+
+    - name: Verify Neural Network Tensor Forward Pass
+      env:
+        PYTHONPATH: .
+      run: |
+        python -c "
+        import torch
+        from src.studying.hybrid_gcn_gat import HybridGCN_GATModel
+        model = HybridGCN_GATModel(num_node_features=64, hidden_dim=128, output_dim=1)
+        model.eval()
+        x = torch.randn(10, 64)
+        adj = torch.eye(10)
+        out = model(x, adj)
+        print(f'GCN-GAT Forward Pass Verified! Output Shape: {out.shape}, Affinity Score: {out.item():.4f}')
+        assert out.shape == (1, 1), 'Invalid tensor output dimension shape.'
+        "

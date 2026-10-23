@@ -1,3 +1,5 @@
+![Advanced Natural Medical Institution Cover Image](1792733114209.jpg)
+
 # Advanced Natural Medical Institution 🌿🤖
 
 An enterprise-grade, AI-driven platform powered by **Gemini Pro instruction cores**, **hybrid Graph Convolutional & Graph Attention Networks (GCN-GAT)**, and **machine learning models** to research, test, and deploy evidence-based natural medical treatments.

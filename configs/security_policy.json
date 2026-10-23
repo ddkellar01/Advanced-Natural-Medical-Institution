@@ -1,0 +1,12 @@
+{
+  "zero_trust_enabled": true,
+  "mtls_required": true,
+  "rate_limiting": {
+    "max_requests_per_minute": 120,
+    "block_duration_seconds": 900
+  },
+  "adversarial_filter": {
+    "strictness_level": "HIGH",
+    "auto_quarantine_on_match": true
+  }
+}

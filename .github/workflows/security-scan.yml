@@ -1,0 +1,31 @@
+name: Security Scan & Vulnerability Audit
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  push:
+    branches: [ main ]
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install Bandit & Safety
+      run: |
+        pip install bandit safety
+
+    - name: Run Bandit Security Linting
+      run: |
+        bandit -r src/ security/ -ll
+
+    - name: Check Dependencies for Known Vulnerabilities
+      run: |
+        safety check -r requirements.txt

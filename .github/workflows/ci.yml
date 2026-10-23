@@ -39,7 +39,7 @@ jobs:
 
     - name: Execute Full Pytest Suite
       env:
-        PYTHONPATH: .
+        PYTHONPATH: ${{ github.workspace }}
       run: |
         pytest tests/ -v
 
@@ -65,7 +65,7 @@ jobs:
 
     - name: Verify Neural Network Tensor Forward Pass
       env:
-        PYTHONPATH: .
+        PYTHONPATH: ${{ github.workspace }}
       run: |
         python -c "
         import torch

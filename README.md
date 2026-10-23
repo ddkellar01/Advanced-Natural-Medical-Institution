@@ -58,6 +58,8 @@ An enterprise-grade, AI-driven platform powered by **Gemini Pro instruction core
 ## 💡 What is this about?
 Imagine taking the healing powers of natural plants—like herbs, fruits, seeds, and roots—and using super smart AI models to test them in a virtual laboratory. This project uses computer intelligence to analyze natural compounds, find out how they fight diseases, check if they are safe, and build personalized natural health protocols for patients.
 
+https://labs.google/fx/tools/flow/shared/video/12ec1f88-9f16-44bc-8de1-b19ae7e1f958
+
 ---
 
 ## ⚡ What does this do?

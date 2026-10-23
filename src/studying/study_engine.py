@@ -13,7 +13,7 @@ class BotanicalDiscoveryEngine:
         self.db = PhytochemicalDatabase()
 
     def screen_compound(self, compound_name: str, smiles: str, target_receptor: str):
-        """Runs the hybrid GCN-GAT model to predict binding affinity (test compatibility alias)."""
+        """Runs the hybrid GCN-GAT model and returns all required dictionary keys to prevent KeyErrors."""
         return self.screen_compound_hybrid(compound_name, smiles, target_receptor)
 
     def screen_compound_hybrid(self, compound_name: str, smiles: str, target_receptor: str):
@@ -26,6 +26,8 @@ class BotanicalDiscoveryEngine:
 
         return {
             "compound_name": compound_name,
+            "smiles": smiles,
+            "target_receptor": target_receptor,
             "architecture": "HYBRID_GCN_GAT",
             "binding_affinity_kcal_mol": round(binding_affinity, 2),
             "result": "VIABLE" if binding_affinity < -7.5 else "REJECTED"

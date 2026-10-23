@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: natmed-core-blue
+  namespace: advanced-natural-medicine
+  labels:
+    app: natmed-core
+    version: blue
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: natmed-core
+      version: blue
+  template:
+    metadata:
+      labels:
+        app: natmed-core
+        version: blue
+    spec:
+      containers:
+      - name: core
+        image: credkellar/natmed-core-engine:latest
+        ports:
+        - containerPort: 8000
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: natmed-core-service
+  namespace: advanced-natural-medicine
+spec:
+  selector:
+    app: natmed-core
+    version: blue
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8000
+  type: ClusterIP

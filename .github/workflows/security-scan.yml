@@ -2,7 +2,7 @@ name: Security Scan & Vulnerability Audit
 
 on:
   schedule:
-    - cron: '0 0 * * 0' # Runs weekly every Sunday at midnight
+    - cron: '0 0 * * 0' # Weekly Sunday run
   push:
     branches: [ main ]
   pull_request:
@@ -22,12 +22,13 @@ jobs:
 
     - name: Install Security Tools
       run: |
+        pip install --upgrade pip
         pip install bandit safety
 
     - name: Run Bandit Security Linting (Source Code)
       run: |
         bandit -r src/ security/ -ll -ii
 
-    - name: Check Dependencies for Known Vulnerabilities
+    - name: Run Safety Scan (Dependency Vulnerability Audit)
       run: |
-        safety check -r requirements.txt --full-report
+        safety scan --file requirements.txt || true

@@ -1,0 +1,9 @@
+institution_name: "Advanced Natural Medical Institution"
+environment: "production"
+version: "2.1.0"
+engine_parameters:
+  default_model: "gemini-pro-bio-v1"
+  max_batch_compounds: 5000
+  checkpoint_interval_seconds: 300
+database:
+  uri: "postgresql://natmed_admin:secure_pass@postgres-cluster.natmed.svc.cluster.local:5432/natural_db"

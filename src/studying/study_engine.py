@@ -1,25 +1,25 @@
-"""In-Silico Graph Neural Network (GNN) Phytochemical Screening Engine."""
+"""Updated Botanical Discovery Engine utilizing Hybrid GCN-GAT."""
 
-import random
-from typing import Dict, Any, List
+import torch
+from typing import Dict, Any
+from src.studying.hybrid_gcn_gat import HybridGCN_GATModel
 
 
 class BotanicalDiscoveryEngine:
     def __init__(self):
-        self.active_targets = ["NF-kB Pathway", "Nrf2 Pathway", "AMPK Pathway"]
+        # Initialize Hybrid GCN-GAT model (e.g., 64 input features -> 128 hidden dim -> 1 binding score)
+        self.hybrid_model = HybridGCN_GATModel(num_node_features=64, hidden_dim=128, output_dim=1)
+        self.hybrid_model.eval()
 
-    def screen_compound(self, compound_name: str, smiles: str, target_receptor: str) -> Dict[str, Any]:
-        """Calculates molecular binding affinity using simulated GNN inference."""
-        # Simulated affinity calculation (lower kcal/mol indicates stronger binding)
-        binding_affinity = round(random.uniform(-11.5, -5.0), 2)
-        bioavailability = round(random.uniform(0.60, 0.98), 2)
-        
+    def screen_compound_hybrid(self, compound_name: str, node_features: torch.Tensor, adjacency_matrix: torch.Tensor) -> Dict[str, Any]:
+        """Runs the hybrid GCN-GAT model to predict binding affinity."""
+        with torch.no_grad():
+            prediction = self.hybrid_model(node_features, adjacency_matrix)
+            binding_affinity = float(prediction.item())
+
         return {
             "compound_name": compound_name,
-            "smiles": smiles,
-            "target_receptor": target_receptor,
-            "binding_affinity_kcal_mol": binding_affinity,
-            "bioavailability_index": bioavailability,
+            "architecture": "Hybrid GCN-GAT",
+            "predicted_binding_affinity_kcal_mol": round(binding_affinity, 2),
             "status": "VIABLE" if binding_affinity < -7.5 else "REJECTED"
         }
-      

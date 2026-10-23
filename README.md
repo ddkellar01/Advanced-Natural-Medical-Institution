@@ -129,24 +129,113 @@ Imagine taking the healing powers of natural plants—like herbs, fruits, seeds,
 > 2. **It Cleans the Medicine:** It inspects the plant extracts to make sure there are no bad chemicals or heavy metals inside.
 > 3. **It Helps Sick People:** It looks at a person's blood tests and tells them exactly which natural herb or remedy will help them feel better.
 > 4. **It Never Forgets:** If the power goes out, it saves its spot instantly like a video game auto-save, and it keeps bad hackers away! 🛡️⚡
+
 ## 📊 System Architecture & Workflow Diagrams
 
 <p align="center">
   <img src="5222.png" alt="Advanced Natural Medical Institution Header" width="100%">
 </p>
 
-### Pipeline & Protocol Flowcharts
+### Complete Pipeline & Protocol Flowcharts
 
-* **Protocol Verification Flow:** `![Protocol Verification Flow](PT-1001%20Protocol%20Verification%20Flow-2026-10-23-071414.png)`
-* **Crash Recovery Engine:** `![Crash Recovery Engine](CrashRecoveryEngine%20Atomic%20Recovery%20Flow-2026-10-23-070618.png)`
-* **SHA-256 Tamper-Evident Logging:** `![SHA-256 Logging](SHA-256%20Tamper-Evident%20Logging%20Pipeline-2026-10-23-070339.png)`
-* **KubeRay TPU Allocation:** `![KubeRay TPU](KubeRay%20TPU%20Allocation%20Pipeline-2026-10-23-070222.png)`
-* **KServe GNN Phytochemical Inference:** `![KServe GNN](KServe%20GNN%20Phytochemical%20Inference%20Pipeline-2026-10-23-070327.png)`
-* **Botanical Discovery Engine:** `![Botanical Discovery](BotanicalDiscoveryEngine%20Screening%20Pipeline-2026-10-23-070313.png)`
-* **Python AIML Dependency:** `![AIML Dependency](Python%20AIML%20Dependency%20Pipeline-2026-10-23-070318.png)`
-* **WAL WAF CICD Deployment:** `![WAL WAF CICD](WAL%20WAF%20CICD%20Deployment%20Framework-2026-10-23-070308.png)`
-* **MIT Software Warranty Disclaimer:** `![Warranty Disclaimer](MIT%20Software%20Warranty%20Disclaimer%20Flow-2026-10-23-070154.png)`
-* **Mass Spec Spectral QC:** `![Mass Spec QC](Mass-Spec%20Spectral%20QC%20Verification%20Pipeline-2026-10-23-070146.png)`
-* **Pytest Root Path Setup:** `![Pytest Setup](Pytest%20Root%20Path%20Setup%20Flow-2026-10-23-071336.png)`
-* **Test Studying Module:** `![Test Studying](TestStudyingModule%20Phytochemical%20Retrieval%20Pipeline-2026-10-23-071112.png)`
-* 
+* **Protocol Verification Flow:** 
+  ![Protocol Verification Flow](PT-1001%20Protocol%20Verification%20Flow-2026-10-23-071414.png)
+
+* **Pytest Root Path Setup:** 
+  ![Pytest Setup](Pytest%20Root%20Path%20Setup%20Flow-2026-10-23-071336.png)
+
+* **Test Studying Module:** 
+  ![Test Studying](TestStudyingModule%20Phytochemical%20Retrieval%20Pipeline-2026-10-23-071112.png)
+
+* **Mass Spec Vision Analyzer Contaminant QC:** 
+  ![Mass Spec Contaminant QC](MassSpecVisionAnalyzer%20Contaminant%20QC%20Pipeline-2026-10-23-071120.png)
+
+* **Mass Spec Vision Analyzer Exposure Pipeline:** 
+  ![Mass Spec Exposure](MassSpecVisionAnalyzer%20Exposure%20Pipeline-2026-10-23-070701.png)
+
+* **Clinical Deployment Engine Deployment:** 
+  ![Clinical Deployment](ClinicalDeploymentEngine%20Deployment%20Flow-2026-10-23-070701.png)
+
+* **Phytochemical Database Receptor Query:** 
+  ![Database Receptor Query](PhytochemicalDatabase%20Receptor%20Query%20Pipeline-2026-10-23-071010.png)
+
+* **Hybrid GCN-GAT Affinity Prediction:** 
+  ![GCN GAT Affinity](Hybrid%20GCN-GAT%20Affinity%20Prediction%20Pipeline-2026-10-23-070922.png)
+
+* **CRP HbA1c Patient Regimen Decision Tree:** 
+  ![CRP HbA1c Decision Tree](CRP%20HbA1c%20Patient%20Regimen%20Decision%20Tree-2026-10-23-070737.png)
+
+* **Hybrid GCN-GAT Model Botanical Discovery:** 
+  ![GCN GAT Botanical Discovery](Hybrid%20GCN_GATModel%20Botanical%20Discovery%20Pipeline-2026-10-23-070813.png)
+
+* **Crash Recovery Engine Atomic Recovery:** 
+  ![Crash Recovery Engine](CrashRecoveryEngine%20Atomic%20Recovery%20Flow-2026-10-23-070618.png)
+
+* **Gemini Orchestrator Recovery Package:** 
+  ![Gemini Orchestrator Recovery](GeminiOrchestrator%20Recovery%20Package%20Pipeline-2026-10-23-070542.png)
+
+* **Gemini Orchestrator Crash Recovery:** 
+  ![Gemini Crash Recovery](GeminiOrchestrator%20Crash%20Recovery%20Flow-2026-10-23-070447.png)
+
+* **SHA-256 Tamper-Evident Logging:** 
+  ![SHA-256 Logging](SHA-256%20Tamper-Evident%20Logging%20Pipeline-2026-10-23-070339.png)
+
+* **Anti-HackShield Regex Inspection:** 
+  ![Anti-HackShield Regex](AntiHackShield%20Regex%20Inspection%20Flow-2026-10-23-070302.png)
+
+* **KubeRay TPU Allocation:** 
+  ![KubeRay TPU](KubeRay%20TPU%20Allocation%20Pipeline-2026-10-23-070222.png)
+
+* **Phytochemical GNN Model Deployment:** 
+  ![Phytochemical GNN Model](Phytochemical%20GNN%20Model%20Deployment%20Flow-2026-10-23-070133.png)
+
+* **Natmed Core Health Check:** 
+  ![Natmed Core Health Check](Natmed%20Core%20Health%20Check%20Pipeline-2026-10-23-070018.png)
+
+* **NVIDIA GPU NNL Engine Architecture:** 
+  ![NVIDIA GPU NNL Architecture](NVIDIA%20GPU%20NNL%20Engine%20Architecture-2026-10-23-065939.png)
+
+* **PyTorch CUDA Study Runtime:** 
+  ![PyTorch CUDA Runtime](PyTorch%20CUDA%20Study%20Runtime-2026-10-23-065848.png)
+
+* **Python Slim Uvicorn Container Build:** 
+  ![Python Uvicorn Container](Python%20Slim%20Uvicorn%20Container%20Build-2026-10-23-065809.png)
+
+* **Advanced Natural Medical Startup:** 
+  ![Advanced Natural Medical Startup](Advanced%20Natural%20Medical%20Startup%20Flow-2026-10-23-065733.png)
+
+* **Bandit Safety Security Scan:** 
+  ![Bandit Safety Scan](Bandit%20Safety%20Security%20Scan%20Pipeline-2026-10-23-065629.png)
+
+* **Hybrid GCN-GAT Test Verification:** 
+  ![GCN GAT Test Verification](Hybrid%20GCN-GAT%20Test%20Verification%20Flow-2026-10-23-065553.png)
+
+* **Zero Trust Request Rate-Limiting:** 
+  ![Zero Trust Rate Limiting](Zero%20Trust%20Request%20Rate-Limiting%20Flow-2026-10-23-065703.png)
+
+* **Docker Hub Image Build Pipeline:** 
+  ![Docker Hub Image Build](Docker%20Hub%20Image%20Build%20Pipeline-2026-10-23-065512.png)
+
+* **Python Dependency Installation:** 
+  ![Python Dependency Installation](Python%20Dependency%20Installation%20Pipeline-2026-10-23-065434.png)
+
+* **Anti-HackShield Prompt Injection Test:** 
+  ![Anti-HackShield Prompt Injection](AntiHackShield%20Prompt%20Injection%20Test%20Flow-2026-10-23-070303.png)
+
+* **KServe GNN Phytochemical Inference:** 
+  ![KServe GNN](KServe%20GNN%20Phytochemical%20Inference%20Pipeline-2026-10-23-070327.png)
+
+* **Botanical Discovery Engine Screening:** 
+  ![Botanical Discovery](BotanicalDiscoveryEngine%20Screening%20Pipeline-2026-10-23-070313.png)
+
+* **Python AIML Dependency:** 
+  ![AIML Dependency](Python%20AIML%20Dependency%20Pipeline-2026-10-23-070318.png)
+
+* **WAL WAF CICD Deployment:** 
+  ![WAL WAF CICD](WAL%20WAF%20CICD%20Deployment%20Framework-2026-10-23-070308.png)
+
+* **MIT Software Warranty Disclaimer:** 
+  ![Warranty Disclaimer](MIT%20Software%20Warranty%20Disclaimer%20Flow-2026-10-23-070154.png)
+
+* **Mass Spec Spectral QC:** 
+  ![Mass Spec QC](Mass-Spec%20Spectral%20QC%20Verification%20Pipeline-2026-10-23-070146.png)

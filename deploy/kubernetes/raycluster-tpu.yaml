@@ -1,0 +1,35 @@
+apiVersion: ray.io/v1
+kind: RayCluster
+metadata:
+  name: raycluster-tpu
+  namespace: advanced-natural-medicine
+spec:
+  rayVersion: '2.9.0'
+  headGroupSpec:
+    rayStartParams:
+      dashboard-host: '0.0.0.0'
+    template:
+      spec:
+        containers:
+        - name: ray-head
+          image: pytorch/pytorch:2.2.1-cuda12.1-cudnn8-runtime
+          resources:
+            limits:
+              cpu: "4"
+              memory: 16Gi
+  workerGroupSpecs:
+  - groupName: tpu-worker-group
+    replicas: 2
+    minReplicas: 1
+    maxReplicas: 4
+    rayStartParams: {}
+    template:
+      spec:
+        containers:
+        - name: ray-worker
+          image: pytorch/pytorch:2.2.1-cuda12.1-cudnn8-runtime
+          resources:
+            limits:
+              cpu: "8"
+              memory: 32Gi
+              google.com/tpu: "4"

@@ -2,11 +2,14 @@ name: Security Scan & Vulnerability Audit
 
 on:
   schedule:
-    - cron: '0 0 * * 0' # Weekly Sunday run
+    - cron: '0 0 * * 0'
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+
+permissions:
+  contents: read
 
 jobs:
   security-audit:

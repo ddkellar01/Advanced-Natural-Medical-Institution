@@ -81,7 +81,7 @@ Imagine taking the healing powers of natural plants—like herbs, fruits, seeds,
 
 ---
 
-## 🎒 Explained in 5th Grade English!
+## 🎒 Explained well for the people in the back... The youth, adults and all!
 
 > **Imagine you have a giant library of every plant, fruit, and herb in the world.** 🍇🌿
 >

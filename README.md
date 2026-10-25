@@ -241,3 +241,83 @@ https://labs.google/fx/tools/flow/shared/video/12ec1f88-9f16-44bc-8de1-b19ae7e1f
 
 * **Mass Spec Spectral QC:** 
   ![Mass Spec QC](Mass-Spec%20Spectral%20QC%20Verification%20Pipeline-2026-10-23-070146.png)
+
+📁 Advanced-Natural-Medical-Institution/
+├── ⚙️ .github/                            # GitHub configuration & workflows
+│   ├── 🔄 workflows/                      # CI/CD Pipeline automation
+│   │   ├── 🧪 ci-testing.yml              # Automated testing pipeline
+│   │   ├── 🚀 deploy-prod.yml             # Production deployment workflow
+│   │   └── 🛡️ security-scan.yml           # Code vulnerability & dependency security audit
+│   ├── 📋 ISSUE_TEMPLATE/                 # Structured issue templates
+│   │   ├── 🐛 bug_report.md               # Bug reporting template
+│   │   └── 💡 feature_request.md          # New feature/module request template
+│   └── 🤝 PULL_REQUEST_TEMPLATE.md        # PR submission guidelines & checklist
+│
+├── ⚙️ .vscode/                           # IDE-specific configuration settings
+│   ├── 🔧 settings.json                   # Workspace formatting & lint settings
+│   └── 🎯 launch.json                     # Local debugging configuration
+│
+├── 📦 backend/                            # Core API & server logic
+│   ├── 📂 src/                            # Backend source code
+│   │   ├── 🔌 api/                        # API routes and controllers
+│   │   │   ├── 🩺 patient_records.py      # Natural medicine clinical records endpoints
+│   │   │   ├── 🌿 herbal_database.py      # Botanical & holistic remedy query endpoints
+│   │   │   ├── 🔬 research_data.py         # Empirical research & clinical trial endpoints
+│   │   │   └── 👤 user_auth.py            # HIPAA-compliant auth & user management
+│   │   ├── 🧠 core/                       # Core business logic & AI models
+│   │   │   ├── ⚙️ config.py               # Environment configuration settings
+│   │   │   ├── 🔐 security.py             # Encryption, JWT handling, & access control
+│   │   │   └── 🤖 remedy_matcher.py       # AI model for herbal & holistic therapy recommendations
+│   │   ├── 🗄️ database/                    # Database models, schemas, and migrations
+│   │   │   ├── 📊 models.py               # ORM database models
+│   │   │   ├── 📐 schemas.py              # Data serialization validation schemas
+│   │   │   └── 🔄 migrations/             # Alembic / SQL migration scripts
+│   │   └── 🛠️ utils/                       # Shared backend helper functions
+│   │       ├── 📜 logger.py               # Application logging utilities
+│   │       └── 📧 email_service.py        # Patient notifications & appointment alerts
+│   ├── 🧪 tests/                          # Backend unit, integration, and E2E tests
+│   │   ├── 🧪 test_herbal_database.py     # Unit tests for remedy lookups
+│   │   └── 🧪 test_patient_records.py     # Functional tests for patient data
+│   ├── 📄 Dockerfile                      # Backend container configuration
+│   └── 📋 requirements.txt                # Python dependencies list
+│
+├── 🎨 frontend/                           # Client-facing web portal & UI
+│   ├── 📂 public/                         # Static web assets
+│   │   ├── 🖼️ favicon.ico                 # Web browser icon
+│   │   └── 🖼️ logo.png                    # Institution branding logo
+│   ├── 📂 src/                            # Frontend source application
+│   │   ├── 🧱 components/                 # Reusable UI widgets
+│   │   │   ├── 🧩 Header.tsx              # Portal navigation bar
+│   │   │   ├── 🧩 Footer.tsx              # Institution page footer
+│   │   │   ├── 🌿 RemedyCard.tsx          # Natural remedy display widget
+│   │   │   └── 📊 PatientChart.tsx        # Interactive holistic health dashboard chart
+│   │   ├── 🖥️ pages/                       # Route views & dashboards
+│   │   │   ├── 🏠 Home.tsx                # Institution landing page
+│   │   │   ├── 🩺 PatientPortal.tsx       # Secure patient wellness portal
+│   │   │   ├── 📖 HerbalCompendium.tsx    # Botanical & natural therapy database view
+│   │   │   └── 🔬 ResearchHub.tsx         # Clinical research & paper database
+│   │   ├── 🎨 styles/                     # CSS stylesheets & theme variables
+│   │   │   └── 💅 globals.css             # Global styling & Tailwind configuration
+│   │   ├── 🛠️ utils/                       # Frontend helper utilities
+│   │   │   └── 🌐 api_client.ts           # REST/GraphQL API integration client
+│   │   ├── 📱 App.tsx                     # Main React Application entry point
+│   │   └── 🚀 index.tsx                   # DOM mounting script
+│   ├── 📄 Dockerfile                      # Frontend container configuration
+│   └── 📦 package.json                    # Node.js dependencies & scripts
+│
+├── 🔬 data/                               # Data storage & natural medicine datasets
+│   ├── 🌿 natural_remedies_db.json        # Structured database of natural remedies & dosages
+│   ├── 📜 clinical_trials.csv             # Historical clinical study outcome data
+│   └── 🧪 raw_research/                   # Raw research papers and unstructured data
+│
+├── 📚 docs/                               # Project documentation & guidelines
+│   ├── 📖 ARCHITECTURE.md                 # System architecture overview
+│   ├── 🔒 HIPAA_COMPLIANCE.md              # Medical data privacy standards
+│   ├── 🌐 API_DOCUMENTATION.md            # Complete API endpoints guide
+│   └── 🌿 REMEDY_TAXONOMY.md              # Standardization guide for herbal remedies
+│
+├── 🐳 docker-compose.yml                  # Multi-container service orchestration
+├── 🙈 .gitignore                          # Ignored git files and directories
+├── 📜 LICENSE                             # Open-source software license
+└── 📝 README.md                           # Main repository overview & setup instructions
+
